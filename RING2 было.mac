@@ -1,0 +1,48 @@
+ring2_1
+
+a2=0
+a3=0
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\2',txt,,
+*VWRITE,'БЕТТА при 0.45, 0.5, 0.55'
+%C
+*VWRITE,betta,a2,a3
+%G,%G,%G
+*CFCLOS
+c
+
+
+ring2_2
+
+*dim,ARRbetta,array,3,1
+*vread,ARRbetta(1),'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\2',txt,,JIK,1,3,,1
+(7F30.0)
+
+a1=ARRbetta(1)
+a3=ARRbetta(3)
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\2',txt,,
+*VWRITE,'БЕТТА при 0.45, 0.5, 0.55'
+%C
+*VWRITE,a1,betta,a3
+%G,%G,%G
+*CFCLOS
+c
+
+
+ring2_3
+
+*dim,ARRbetta,array,3,1
+*vread,ARRbetta(1),'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\2',txt,,JIK,1,3,,1
+(7F30.0)
+
+a1=ARRbetta(1)
+a2=ARRbetta(2)
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\2',txt,,
+*VWRITE,'БЕТТА при 0.45, 0.5, 0.55'
+%C
+*VWRITE,a1,a2,betta
+%G,%G,%G
+*CFCLOS
+c
