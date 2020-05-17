@@ -1,0 +1,175 @@
+ring5_1
+
+
+a2=0
+a3=0
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Betta',txt,,
+*VWRITE,'БЕТТА при 0.45, 0.5, 0.55'
+%C
+*VWRITE,betta,a2,a3
+%G,%G,%G
+*CFCLOS
+
+b2=0
+b3=0
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Kin',txt,,
+*VWRITE,'КИН при 0.45, 0.5, 0.55'
+%C
+*VWRITE,kina,b2,b3
+%G,%G,%G
+*CFCLOS
+
+c2=0
+c3=0
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Tnapr',txt,,
+*VWRITE,'Tnapr при 0.45, 0.5, 0.55'
+%C
+*VWRITE,tnapra,c2,c3
+%G,%G,%G
+*CFCLOS
+
+d2=0
+d3=0
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\M',txt,,
+*VWRITE,'M при 0.45, 0.5, 0.55'
+%C
+*VWRITE,imin,d2,d3
+%G,%G,%G
+*CFCLOS
+
+
+c
+
+
+ring5_2
+
+*dim,ARRbetta,array,3,1
+*vread,ARRbetta(1),'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Betta',txt,,JIK,1,3,,1
+(7F30.0)
+
+a1=ARRbetta(1)
+a3=ARRbetta(3)
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Betta',txt,,
+*VWRITE,'БЕТТА при 0.45, 0.5, 0.55'
+%C
+*VWRITE,a1,betta,a3
+%G,%G,%G
+*CFCLOS
+
+*dim,ARRkin,array,3,1
+*vread,ARRkin(1),'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Kin',txt,,JIK,1,3,,1
+(7F30.0)
+
+b1=ARRkin(1)
+b3=ARRkin(3)
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Kin',txt,,
+*VWRITE,'КИН при 0.45, 0.5, 0.55'
+%C
+*VWRITE,b1,kina,b3
+%G,%G,%G
+*CFCLOS
+
+*dim,ARRtn,array,3,1
+*vread,ARRtn(1),'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Tnapr',txt,,JIK,1,3,,1
+(7F30.0)
+
+c1=ARRtn(1)
+c3=ARRtn(3)
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Tnapr',txt,,
+*VWRITE,'Тнапр при 0.45, 0.5, 0.55'
+%C
+*VWRITE,c1,tnapra,c3
+%G,%G,%G
+*CFCLOS
+
+
+
+
+*dim,ARRm,array,3,1
+*vread,ARRm(1),'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\M',txt,,JIK,1,3,,1
+(7F30.0)
+
+d1=ARRm(1)
+d3=ARRm(3)
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\M',txt,,
+*VWRITE,'M при 0.45, 0.5, 0.55'
+%C
+*VWRITE,d1,imin,d3
+%G,%G,%G
+*CFCLOS
+
+c
+
+
+ring5_3
+
+*dim,ARRbetta,array,3,1
+*vread,ARRbetta(1),'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Betta',txt,,JIK,1,3,,1
+(7F30.0)
+
+a1=ARRbetta(1)
+a2=ARRbetta(2)
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Betta',txt,,
+*VWRITE,'БЕТТА при 0.45, 0.5, 0.55'
+%C
+*VWRITE,a1,a2,betta
+%G,%G,%G
+*CFCLOS
+
+
+
+*dim,ARRkin,array,3,1
+*vread,ARRkin(1),'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Kin',txt,,JIK,1,3,,1
+(7F30.0)
+
+b1=ARRkin(1)
+b2=ARRkin(2)
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Kin',txt,,
+*VWRITE,'КИН при 0.45, 0.5, 0.55'
+%C
+*VWRITE,b1,b2,kina
+%G,%G,%G
+*CFCLOS
+
+
+
+*dim,ARRtn,array,3,1
+*vread,ARRtn(1),'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Tnapr',txt,,JIK,1,3,,1
+(7F30.0)
+
+c1=ARRtn(1)
+c2=ARRtn(2)
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\Tnapr',txt,,
+*VWRITE,'Тнапр при 0.45, 0.5, 0.55'
+%C
+*VWRITE,c1,c2,tnapra
+%G,%G,%G
+*CFCLOS
+
+
+*dim,ARRm,array,3,1
+*vread,ARRm(1),'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\M',txt,,JIK,1,3,,1
+(7F30.0)
+
+d1=ARRm(1)
+d2=ARRm(2)
+
+*CFOPEN,'C:\Users\Steplerchik\Desktop\ВКР - Оптимизация членов разложения\RING\Data-out\5\M',txt,,
+*VWRITE,'M при 0.45, 0.5, 0.55'
+%C
+*VWRITE,d1,d2,imin
+%G,%G,%G
+*CFCLOS
+
+c

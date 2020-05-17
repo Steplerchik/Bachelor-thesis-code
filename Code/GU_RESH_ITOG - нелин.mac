@@ -1,0 +1,59 @@
+!                   Решаем
+/SOL
+  
+sila=55000
+
+ANTYPE,0
+EQSLV,SPAR 
+
+CSYS,0
+ASEL,S,LOC,X,0
+DA,ALL,UX,
+ASEL,ALL
+
+LSEL,S,LOC,X,0
+LSEL,U,LOC,Z,0,H-mini
+DL,ALL,,UZ,
+LSEL,ALL
+
+CSYS,1
+ASEL,S,LOC,Y,180
+DA,ALL,UY,
+ASEL,ALL
+ASEL,S,LOC,Y,0
+ASEL,U,LOC,Z,H-1.2*a,H-0.8*a
+DA,ALL,UY,
+ASEL,ALL
+
+CSYS,1
+NSEL,S,LOC,Y,0
+NSEL,U,LOC,Z,mini/4,H
+*GET, noc, node, 0, count 
+CSYS,0
+F,ALL,FZ,(sila/2)/noc
+NSEL,ALL
+
+CSYS,1
+NSEL,S,LOC,Y,180
+NSEL,U,LOC,Z,mini/4,H
+*GET, noc1, node, 0, count
+CSYS,0 
+F,ALL,FZ,(sila/2)/noc1
+NSEL,ALL
+
+
+ANTYPE,static            !Статика
+NLGEOM,on            !Геометрическая нелинейность
+OUTRES,ALL,all       !Сохраняем все
+NSUBST,20,40,10          !100 шагов нагружения (после самого последнего будет реализована сила, которую задал)
+solve
+
+/POST26
+
+! Для модели 7_3:
+!NSOL,2,10,U,Z, UZ_2,   !Выбираем отображение только перемещения узла 10 (он в вершине трещины на внешнем диаметре) 
+
+!PLVAR,2,               !Строим график, где Time=1 равнозначно силе, которой задавал изначально. Тип дошли итерации до нее.
+
+
+
